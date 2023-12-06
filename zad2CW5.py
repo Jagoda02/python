@@ -52,10 +52,14 @@ class DNASeq(Seq):
         sekw = self.seq
         self.seq = ""
         for self.zasada in sekw:
-            if self.zasada != 'T':
-                self.seq = self.seq + self.zasada
-            else:
+            if self.zasada == 'T':
+                self.seq = self.seq + 'A'
+           if self.zasada == 'G':
+                self.seq = self.seq + 'C'
+            if self.zasada == 'A':
                 self.seq = self.seq + 'U'
+            if self.zasada == 'C':
+                self.seq = self.seq + 'G'
         return self.seq
     
 
